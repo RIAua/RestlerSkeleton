@@ -1,3 +1,6 @@
 [submodule "vendor/Restler"]
 	path = vendor/Restler
 	url = git://github.com/AGvin/Restler.git
+[submodule "vendor/Ria"]
+	path = vendor/Ria
+	url = git://github.com/RIAua/Ria.git
