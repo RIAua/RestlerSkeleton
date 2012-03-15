@@ -20,6 +20,12 @@ directory of the project and you should be ready to go!
 
 If you're wondering what the `--recursive` flag is, keep reading:
 
+Used Submodules
+--------------
+
+    https://github.com/RIAua/Ria - Ria.ua simple libraries
+    https://github.com/AGvin/Restler - fork of https://github.com/Luracast/Restler with pagination support
+
 Git Submodules
 --------------
 This project makes use of [Git submodules](http://book.git-scm.com/5_submodules.html).
