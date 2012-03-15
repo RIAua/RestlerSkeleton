@@ -13,7 +13,7 @@ Installation
 The easiest way to get a working copy of this project is to do a recursive
 clone:
 
-    git clone --recursive git://github.com/AGvin/RestlerSkeleton.git
+    git clone --recursive git://github.com/RIAua/RestlerSkeleton.git
 
 After the clone is complete, set up a virtual host to point to the public/
 directory of the project and you should be ready to go!
