@@ -1,0 +1,3 @@
+[submodule "vendor/Restler"]
+	path = vendor/Restler
+	url = git@github.com:AGvin/Restler.git
