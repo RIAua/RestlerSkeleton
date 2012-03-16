@@ -10,6 +10,9 @@ Restler.
 
 Installation
 ------------
+nginx (with php-fpm) configuration example: https://github.com/RIAua/RestlerSkeleton/wiki/nginx-configuration
+
+
 The easiest way to get a working copy of this project is to do a recursive
 clone:
 
