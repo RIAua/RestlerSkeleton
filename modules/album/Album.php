@@ -29,6 +29,7 @@ class Album extends \Ria\Rest\CrudAdapter {
         // strtolower(__CLASS__)  - is module name
         parent::__construct(strtolower(__CLASS__),APPLICATION_ENV);
     }
+    
 //    curl -X GET http://restler-skeleton.local-ria.ua/album -H "debug: true" -H "debug-section: sometest"
 //    
 //    curl -X POST http://restler-skeleton.local-ria.ua/album
@@ -36,4 +37,8 @@ class Album extends \Ria\Rest\CrudAdapter {
 //    curl -X POST http://restler-skeleton.local-ria.ua/album -H "Content-Type: application/json" -d '{"artist": "Coldplay", "title": "Viva La Vida"}'
 //    curl -X PUT http://restler-skeleton.local-ria.ua/album/<id> -H "Content-Type: application/json" -d '{"artist": "Coldplay", "title": "Viva La Vida"}'
 //    curl -X DELETE http://restler-skeleton.local-ria.ua/album/<id>
+
+// if You need more request/response information, use "-v" or "--verbose" flags 
+// example:
+// curl -v -X GET http://restler-skeleton.local-ria.ua/album
 }
