@@ -28,7 +28,7 @@ $restler = new \Ria\Rest\Restler($conf['restler']['production_mode']); //for usi
 
 
 //for more fast work with module routing on nginx
-$predefined_module = getenv('APPLICATION_PREDEF_MODULE') ? ucfirst(getenv('APPLICATION_PREDEF_MODULE')) : null;
+$predefined_module = getenv('APPLICATION_MODULE') ? ucfirst(getenv('APPLICATION_MODULE')) : null;
 if($predefined_module) {
         // setup restler cache_dir from config - dir must be createt manualy!
         $restler->cache_dir = $conf['restler']['cache_dir'] . strtolower($predefined_module). '/';
