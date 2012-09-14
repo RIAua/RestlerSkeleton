@@ -16,7 +16,7 @@ nginx (with php-fpm) configuration example: https://github.com/RIAua/RestlerSkel
 The easiest way to get a working copy of this project is to do a recursive
 clone:
 
-    git clone --recursive git://github.com/RIAua/RestlerSkeleton.git
+    git clone --recursive git://github.com/RIAua/RestlerSkeleton.git <new_folder_name>
 
 After the clone is complete, set up a virtual host to point to the public/
 directory of the project and you should be ready to go!
