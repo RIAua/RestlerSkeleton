@@ -25,13 +25,23 @@ require_once (getenv('RESTLER_PATH') ? : 'vendor/Restler/restler/') . 'restler.p
 // create restler object
 $restler = new \Ria\Rest\Restler($conf['restler']['production_mode']); //for using cache headers
 //$restler = new \Restler($conf['restler']['production_mode']);
-// setup restler cache_dir from config
-$restler->cache_dir = $conf['restler']['cache_dir'];
 
-// add modules from config
-foreach ($conf['modules'] as $module) {
-    require_once 'modules/' . strtolower($module) . '/' . $module . '.php';
-    $restler->addAPIClass($module);
+
+//for more fast work with module routing on nginx
+$predefined_module = getenv('APPLICATION_PREDEF_MODULE') ? ucfirst(getenv('APPLICATION_PREDEF_MODULE')) : null;
+if($predefined_module) {
+        // setup restler cache_dir from config - dir must be createt manualy!
+        $restler->cache_dir = $conf['restler']['cache_dir'] . strtolower($predefined_module). '/';
+        require_once 'modules/' . strtolower($predefined_module) . '/' . $predefined_module . '.php';
+        $restler->addAPIClass($predefined_module);
+} else {   
+    // setup restler cache_dir from config
+    $restler->cache_dir = $conf['restler']['cache_dir'];
+    // add modules from config
+    foreach ($conf['modules'] as $module) {
+        require_once 'modules/' . strtolower($module) . '/' . $module . '.php';
+        $restler->addAPIClass($module);
+    }
 }
 $restler->handle();
 //nothing do after handle (die)
