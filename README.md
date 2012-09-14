@@ -29,7 +29,8 @@ Used Submodules
     https://github.com/RIAua/Ria - Ria.ua simple libraries
     https://github.com/AGvin/Restler - fork of https://github.com/Luracast/Restler with pagination support
     
-Update all submodules
+Update all submodules:
+
     git submodule -q foreach git pull -q origin master
 
 Git Submodules
